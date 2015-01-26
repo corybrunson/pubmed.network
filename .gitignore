@@ -1,2 +1,2 @@
 # exclude author-ity data
-data/*
+data/authority*
