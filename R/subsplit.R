@@ -8,6 +8,12 @@
 #' @param inds Numerical vector; entries of each `strsplit` to keep
 #' @export
 
-subsplit <- function(x, pattern, inds = 1) {
+subsplit <- function(x, pattern, inds = 1, cl, parallel = !missing(cl)) {
+    if(parallel) {
+        stopifnot(require(snow))
+        stopifnot(require(parallel))
+        if(missing(cl)) cl <- makeCluster(rep('localhost', detectCores()[[1]]))
+        parLapply(cl, strsplit(x, pattern), function(vec) vec[inds])
+    }
     lapply(strsplit(x, pattern), function(vec) vec[inds])
 }
