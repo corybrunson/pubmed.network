@@ -5,7 +5,7 @@
 #' @param files Character vector; names of Author-ity files to include
 #' @param file Character singleton; name of destination `.csv` file
 #' @param no.lines Numeric; number of lines to read from `files` at a time
-#' @praam wh.col Numeric; which columns of Author-ity to include in `file`
+#' @param wh.col Numeric; which columns of Author-ity to include in `file`
 #' @param cl Cluster; optional
 #' @export
 

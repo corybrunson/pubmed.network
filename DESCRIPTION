@@ -1,21 +1,23 @@
-Package: authority_reader
+Package: pubmed.network
 Type: Package
-Title: Functions for the analysis of the Author-ity database.
+Title: Network analysis of PubMed data
 Version: 0.1
 Date: 2015-01-22
 Authors@R: person('Jason Cory', 'Brunson', email = 'jabrunso@vt.edu',
     role = c('aut', 'cre'))
 Maintainer: Jason Cory Brunson <brunson@uchc.edu>
-Description: This is a suite of functions used in the analysis of the Author-ity
-    database:
-    http://arrowsmith.psych.uic.edu/arrowsmith_uic/author2.html
-Depends:
+Description: This is a suite of functions used in the analysis of PubMed data
+    and the Author-ity database.
+Depends: 
     R (>= 3.0.1),
     R.utils,
-    data.table
-Imports:
-    R.utils
-    data.table
-Suggests:
+    data.table,
+    igraph
+Imports: 
+    R.utils,
+    data.table,
+    igraph
+Suggests: 
     knitr
 License: GPL-2
+VignetteBuilder: knitr
