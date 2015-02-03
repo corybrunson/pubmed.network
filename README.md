@@ -1,7 +1,7 @@
-pubmed_network
+pubmed.network
 =======
 
-This R package contains functions for analysis of [PubMed] [2] data and the [Author-ity database] [1].
+This R package contains functions for network analysis of [PubMed] [2] data and the [Author-ity database] [1].
 
 [1]: http://arrowsmith.psych.uic.edu/arrowsmith_uic/author2.html
 [2]: http://www.ncbi.nlm.nih.gov/pubmed/
