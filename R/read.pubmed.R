@@ -7,20 +7,16 @@
 #' @export
 
 # Read PubMed data as a table
-read.pubmed <- function(file, nrows = -1, skip = 0)
+read.pubmed <- function(file, nrows = -1, skip = 0, fileEncoding = '437')
 {
     # Read the connection into a data frame
-    df <- read.csv(file = file, header = TRUE, nrows = nrows, skip = skip,
-                   row.names = NULL,
-                   fileEncoding = '437',
-                   colClasses = c(rep('character', 3),
-                                  rep('factor', 2),
-                                  rep('character', 2),
-                                  'factor',
-                                  'character',
-                                  'factor',
-                                  rep('character', 4),
-                                  'factor'))
-    names(df) <- names(read.csv(file, nrows = 1))
-    df
+    dat <- read.table(file = file, header = TRUE,
+                     sep = ',', quote = '\"',
+                     fill = TRUE, comment.char = '',
+                     nrows = nrows, skip = skip,
+                     row.names = NULL,
+                     fileEncoding = fileEncoding,
+                     colClasses = 'character')
+    names(dat) <- names(read.csv(file, nrows = 1))
+    dat
 }
