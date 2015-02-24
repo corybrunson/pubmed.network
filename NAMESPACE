@@ -2,6 +2,8 @@
 
 export(an.union)
 export(count.instances)
+export(mesh.family)
 export(read.pubmed)
 export(subsplit)
 export(template)
+export(timid.substr)
