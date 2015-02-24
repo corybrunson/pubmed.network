@@ -7,7 +7,7 @@
 #' @export
 
 # Read PubMed data as a table
-read.pubmed <- function(file, nrows = -1, skip = 0, fileEncoding = '437')
+read.pubmed.old <- function(file, nrows = -1, skip = 0, fileEncoding = '437')
 {
     # Read the connection into a data frame
     dat <- read.table(file = file, header = TRUE,
