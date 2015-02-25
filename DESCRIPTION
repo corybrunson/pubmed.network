@@ -12,11 +12,13 @@ Depends:
     R (>= 3.0.1),
     R.utils,
     data.table,
-    igraph
+    igraph,
+    reshape2
 Imports: 
     R.utils,
     data.table,
-    igraph
+    igraph,
+    reshape2
 Suggests: 
     knitr
 License: GPL-2
