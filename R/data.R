@@ -10,3 +10,14 @@
 #' \url{http://www.nlm.nih.gov/mesh/filelist.html}
 #' @name mtrees
 NULL
+
+#' Begin and end dates for the PubMed files
+#'
+#' A data.frame of the first and last year for which some publication from that
+#' year appears in each of the 684 PubMed data files.
+#'
+#' @format A data.frame with columns `begin` and `end`.
+#' @source Xintao Wei
+#' @name file.rans
+NULL
+
