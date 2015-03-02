@@ -37,7 +37,9 @@ read.pubmed <- function(file, nrows = -1, skip = 0, fileEncoding = '437')
         }
     }
     # Write lines to a temp file
-    con <- file('data/medline/temp.txt')
+    temp <- 'data/medline/temp.txt'
+    if(file.exists(temp)) file.remove(temp)
+    con <- file(temp)
     writeLines(lines, con)
     close(con)
     # Read the temp file into a data frame
