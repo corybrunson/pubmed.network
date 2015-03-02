@@ -9,7 +9,7 @@
 #' @export
 
 # Read PubMed data as a table
-read.pubmed <- function(file, nrows = -1, skip = 0, fileEncoding = '437')
+read.pubmed <- function(file, nrows = -1, skip = 0)
 {
     lines <- readLines(file)
     # Regular expressions used in the conversion process
@@ -48,7 +48,6 @@ read.pubmed <- function(file, nrows = -1, skip = 0, fileEncoding = '437')
                       fill = TRUE, comment.char = '',
                       nrows = nrows, skip = skip,
                       row.names = NULL,
-                      fileEncoding = fileEncoding,
                       colClasses = 'character')
     names(dat) <- names(read.csv(file, nrows = 1))
     as.data.table(dat)

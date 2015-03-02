@@ -4,7 +4,7 @@
 \alias{read.pubmed}
 \title{Read PubMed data to a data frame}
 \usage{
-read.pubmed(file, nrows = -1, skip = 0, fileEncoding = "437")
+read.pubmed(file, nrows = -1, skip = 0)
 }
 \arguments{
 \item{file}{Character string; the name of the data file}
