@@ -1,15 +1,17 @@
 # Store MeSH tree as a hierarchical data.table
-library(data.table)
 
 # set working directory
-if(file.exists('~/Documents')) setwd('~/Documents/CQM/')
-setwd('PubMed/')
+if(file.exists('~/Documents')) {
+    setwd('~/Documents/CQM/PubMed')
+} else {
+    setwd('~/PubMed')
+}
 # load packages
-pkgs <- c('pubmed.network', 'snow', 'parallel')
+pkgs <- c('data.table')
 for(pkg in pkgs) {
     if(!require(pkg, character.only = TRUE)) {
         install.packages(pkg)
-        library(pkg, character.only = TRUE)
+        stopifnot(require(pkg, character.only = TRUE))
     }
 }
 
